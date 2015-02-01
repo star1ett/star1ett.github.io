@@ -1,0 +1,91 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Learn Programming</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		body{
+			display: none;
+			width: 990px;
+			margin: 50px auto 50px; auto;
+		}
+		p{ font-family: '맑은 고딕', sans-serif; }
+		#title{
+			padding-left: 20px;
+			width: 300px;
+			position: fixed;
+			font-size: 40px;
+			border: 2px solid white;
+		}
+		p.home{
+			position: fixed;
+			top: 260px;
+			opacity: 0.8;
+			font-size: 20px;
+			transition: all 0.3s;
+		}
+		p.home:hover{
+			opacity: 0.4;
+			margin-left: 10px;
+		}
+		#content{
+			font-size: 25px;
+			margin-left: 350px;
+			opacity: 0.8;
+		}
+		a.link{ transition: all 0.3s; }
+		a.link:hover{
+			margin-left: 10px;
+			opacity: 0.4;
+		}
+	</style>
+	<script src="jquery-1.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("body").css("display","none");
+			$("body").fadeIn(1000);
+			$("a.link").click(function(event){
+				event.preventDefault();
+				linkLocation = this.href;
+				$("body").fadeOut(500, redirectPage);
+			});
+			$("a.home").click(function(event){
+				event.preventDefault();
+				linkLocation = this.href;
+				$("body").fadeOut(500, redirectPage);
+			});
+			function redirectPage() {
+				window.location = linkLocation;
+			}
+		});
+	</script>
+</head>
+<body>
+	<div id="title"><p>Learn<br>Programming</p></div>
+	<p class="home"><a href="./main.html" class="home">← Go back to home page</a></p>
+	<div id="content">
+		<p style="color: #ffbbbb;">웹사이트</p>
+		<p><a href="http://www.soen.kr" class="link">SoEn <span style="font-size: 15px;">| C, C++, API, OpenGL 등 텍스트 강좌 제공</span></a></p>
+		<p><a href="http://www.opentutorials.org" class="link">생활코딩 <span style="font-size: 15px;">| HTML/CSS, JavaScript, jQuery, PHP 등 웹서비스 관련 강좌 제공</span></a></p>
+		<p><a href="http://www.joinc.co.kr/" class="link">Joinc <span style="font-size: 15px;">| 리눅스 프로그래밍 강좌 제공</span></a></p>
+		<p><a href="http://www.phpschool.com/" class="link">PHP School <span style="font-size: 15px;">| PHP강좌 제공, 정보 공유</span></a></p>
+		<br>
+		<p style="color: #ffbbbb;">블로그</p>
+		<p><a href="http://itguru.tistory.com/" class="link">Programming IT <span style="font-size: 15px;">| 쉽게 풀이된 C언어 강의</span></a></p>
+		<p><a href="http://knight76.tistory.com/" class="link">김용환 블로그 <span style="font-size: 15px;">| C언어, Java, HTML 등 정보 수록</span></a></p>
+		<br>
+		<p style="color: #ffbbbb;">카페</p>
+		<p><a href="http://cafe.naver.com/gogoomas" class="link">고구마S <span style="font-size: 15px;">| 프로그래밍 정보 공유</span></a></p>
+		<p><a href="http://cafe.naver.com/cafec" class="link">C언어를 배우자 <span style="font-size: 15px;">| C언어 관련 강좌, 정보 공유</span></a></p>
+		<p><a href="http://cafe.naver.com/cstudyjava" class="link">윤성우의 프로그래밍 스터디그룹 <span style="font-size: 15px;">| C, C++, Java 정보 공유</span></a></p>
+		<br>
+		<p style="color: #ffbbbb;">북마크</p>
+		<p><a href="http://weezzle.net/1687" class="link">C언어 함수 완벽 정리 <span style="font-size: 15px;">| C언어 함수 정리</span></a></p>
+   	</div>
+</body>
+</html>
+
+<!--
+<p><a href="" class="link"> <span style="font-size: 15px;">| </span></a></p>
+-->

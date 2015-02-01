@@ -1,0 +1,82 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Learn Programming</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		body{
+			display: none;
+			width: 990px;
+			margin: 50px auto 50px; auto;
+		}
+		p{ font-family: '맑은 고딕', sans-serif; }
+		#title{
+			padding-left: 20px;
+			width: 300px;
+			position: fixed;
+			font-size: 40px;
+			border: 2px solid white;
+		}
+		p.home{
+			position: fixed;
+			top: 300px;
+			opacity: 0.8;
+			font-size: 20px;
+			transition: all 0.3s;
+		}
+		p.home:hover{
+			opacity: 0.4;
+			margin-left: 10px;
+		}
+		#youtube{
+			opacity: 1;
+			width: 640px;
+			height: 360px;
+		}
+		#content{ margin-left: 350px; }
+		#content_text{ opacity: 0.8; }
+	</style>
+	<script src="jquery-1.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("body").css("display","none");
+			$("body").fadeIn(1000);
+			$("a.home").click(function(event){
+				event.preventDefault();
+				linkLocation = this.href;
+				$("body").fadeOut(500, redirectPage);
+			});
+			function redirectPage() {
+				window.location = linkLocation;
+			}
+		});
+	</script>
+</head>
+<body>
+	<div id="title"><p>Why we<br>need to learn<br>Programming?</p></div>
+	<p class="home"><a href="./main.html" class="home">← Go back to home page</a></p>
+	<div id="content">
+		<div id="youtube"><iframe width="640" height="360" src="http://www.youtube.com/embed/SESuctdE9vM" frameborder="0" allowfullscreen></iframe></div>
+		<p id="content_text"><br><br>
+			"이 나라 모든 사람들이 프로그래밍을 배워야 하는 이유는 사고하는 법을 배워야 하기 때문이다."<br><span style="color: #ffbbbb"> ─ 스티브 잡스(Steve Jobs), 애플 창업자</span><br><br>
+			"생각해보세요! 대학교 기숙사 방안에서 회사를 한번도 세워본적 없는 사람들 몇명이 모여서 10억명 인구가 일상적으로 사용하는 서비스를 만들었어요. 생각하면 생각할수록 골때리는 일이죠? 안그래요? 너무 경이롭고 놀라운 일입니다."<br><span style="color: #ffbbbb"> ─ 마크 주커버그(Mark Zuckerberg), 페이스북 창업자</span><br><br>
+            "자신만의 아이디어를 생각해 내고 그 아이디어를 자기 손으로 직접 실현시킨 후 버튼 하나로 그것을 수백만 사람들이 사용할 수 있게 하는것... 인류 역사에서 그것이 가능했던 것은 우리 세대가 처음입니다."<br><span style="color:#ffbbbb"> ─ 드류 휴스턴(Drew Houston), 드롭박스 창업자</span><br><br><br><br>
+			프로그래밍은 세상을 바꾸는 가장 단순한 방법입니다.<br>
+			세상 모든 사람들에게 영향을 줄 수 있는 가장 쉬운 방법을 찾으신다면,<br>
+			프로그래밍이 그 해답이 되어 줄 수 있을 것입니다.<br><br>
+			모든 것이 정보화되어 있는 지금, 컴퓨터 기술의 영향을 받지 않고 있는 분야는 없습니다.<br>
+			이 말은, 세상을 바꾸기 위해 당신이 준비해야 할 준비물이<br>
+			컴퓨터 한 대로 충분하다는 말입니다.<br>
+			얼마나 매력적인가요!<br><br>
+			그러나 많은 사람들이 프로그래밍을 어려운 분야라고 생각하여 접근하기를 꺼려합니다.<br>
+			하지만 프로그래밍은 많은 사람들이 생각하는 것처럼 어렵지 않습니다.<br>
+			누구든지 배울 수 있고, 배운 것을 응용할 수 있습니다.<br>
+			천재들만이 이해할 수 있는 어려운 개념들을<br>
+			이해해야만 할 수 있는 것이 절대 아니기 때문입니다.<br><br>
+			더 많은 사람들이 프로그래밍에 관심을 가지고<br>
+			세상을 바꾸는 주인공이 되기를 바랍니다.<br>
+		</p>
+	</div>
+</body>
+</html>

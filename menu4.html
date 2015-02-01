@@ -1,0 +1,77 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Learn Programming</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		body{
+			display: none;
+			width: 990px;
+			margin: 50px auto 50px; auto;
+		}
+		p{ font-family: '맑은 고딕', sans-serif; }
+		#title{
+			padding-left: 20px;
+			width: 300px;
+			position: fixed;
+			font-size: 40px;
+			border: 2px solid white;
+		}
+		p.home{
+			position: fixed;
+			top: 220px;
+			opacity: 0.8;
+			font-size: 20px;
+			transition: all 0.3s;
+		}
+		p.home:hover{
+			opacity: 0.4;
+			margin-left: 10px;
+		}
+		#content{
+			margin-left: 350px;
+			opacity: 0.8;
+		}
+		#mail{
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			transition: all 0.3s;
+		}
+		#mail:hover{ opacity: 0.4; margin-left: 10px; }
+	</style>
+	<script src="jquery-1.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("body").css("display","none");
+			$("body").fadeIn(1000);
+			$("a.home").click(function(event){
+				event.preventDefault();
+				linkLocation = this.href;
+				$("body").fadeOut(500, redirectPage);
+			});
+			function redirectPage() {
+				window.location = linkLocation;
+			}
+		});
+	</script>
+</head>
+<body>
+	<div id="title"><p>About</p></div>
+	<p class="home"><a href="./main.html" class="home">← Go back to home page</a></p>
+	<div id="content">
+		<p>
+			이 페이지는 사람들이 프로그래밍을 배우도록 장려하고,<br>
+			프로그래밍을 처음 배우고자 하는 사람들이 인터넷에서 헤매지 않고도<br>
+			한 자리에서 쉽게 배울 수 있도록 하자는 취지에서 만들어졌습니다.<br><br>
+			이 페이지가 프로그래밍을 처음 배우는 사람들에게<br>
+			많은 도움이 되어 줄 수 있었으면 합니다.<br><br><br><br>
+		</p>
+		<p>제작자</p>
+		<p>선린인터넷고등학교 정보통신과 김지훈<br>
+		<a id="mail" href="mailto:happyh4cking@gmail.com">Mail: happyh4cking@gmail.com</a></p>
+
+	</div>
+</body>
+</html>
